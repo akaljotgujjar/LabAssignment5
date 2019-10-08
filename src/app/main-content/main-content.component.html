@@ -1,0 +1,41 @@
+<div class="row-two">
+    <div class="container-padding alter">
+        <h1>Row 2 Column 1</h1>
+        <!-- -- Image from Google -- -->
+        <!-- <img class="bulldog" src="./1200px-Fresno_State_Bulldogs_logo.svg.png" alt="bulldog"> -->
+        <p class="hover">Hover over me!</p>
+    </div>
+    <div class="container-padding alter2">
+        <h1 class="r2c2">Row 2 Column 2</h1>
+        <!-- <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nostrum, repellat facilis
+                commodi, iusto provident animi debitis maiores id corporis sit ut pariatur aspernatur ipsa modi dicta
+                quisquam porro nesciunt tempora ab? Aut esse ducimus eligendi illum a eaque nostrum distinctio
+                dignissimos error fuga impedit delectus recusandae praesentium, dolorem aspernatur.</p> -->
+
+        <button (click)="addStudent()" class="add-button">Add Student</button>
+        <table class="table-one">
+            <thead>
+                <tr>
+                    <td>ID:</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Courses</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td>{{student.id}}</td>
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.lastName}}</td>
+                    <td>{{student.course}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container-padding alter">
+        <h1>Row 2 Column 3</h1>
+        <!-- -- Image from Google -- -->
+        <!-- <img class="bulldog" src="./1200px-Fresno_State_Bulldogs_logo.svg.png" alt="bulldog"> -->
+        <p class="hover">Hover over me!</p>
+    </div>
+</div>

@@ -1,15 +1,10 @@
-.main-container {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr 12fr 1fr;
-}
-
 .row-one,
 .row-two,
 .row-three {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     text-align: center;
+    height: 100%;
 }
 
 .container-padding {
@@ -33,20 +28,6 @@ h1 {
     font: bold;
 }
 
-/* .text-center {
-    text-align: center;
-    font-size: 110%;
-    font-family: "Bellefair";
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.text-center:hover {
-    color: white;
-    background-color: #016c8d;
-} */
-
 .r2c2::after {
     content: " ";
     background-color: #016c8d;
@@ -62,11 +43,6 @@ h1 {
     word-spacing: 2px;
 }
 
-.bulldog {
-    height: 120px;
-    width: 160px;
-    margin-top: 15px;
-}
 
 .lorem {
     margin-right: 10px;
@@ -78,11 +54,6 @@ h1 {
     color: white;
 }
 
-.paragraph {
-    color: red;
-    border-bottom: 2px solid #016c8d;
-    margin: 10px 150px 10px 150px;
-}
 
 .hover {
     margin-top: 10px;
@@ -90,4 +61,31 @@ h1 {
 
 .bulldog.hover {
     display: block;
+}
+
+* {
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.table-one {
+    width: 100%;
+    border: 1px solid #CCC;
+}
+
+.table-one > tbody > tr > td {
+    border: 1px solid #CCC;
+    min-height: 50px;
+    padding: .5em;
+}
+
+.add-button {
+    font-size: bold;
 }
