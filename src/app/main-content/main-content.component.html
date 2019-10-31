@@ -1,38 +1,14 @@
 <div class="row-two">
     <div class="container-padding alter">
         <h1>Row 2 Column 1</h1>
-        <!-- -- Image from Google -- -->
-        <!-- <img class="bulldog" src="./1200px-Fresno_State_Bulldogs_logo.svg.png" alt="bulldog"> -->
+
         <p class="hover">Hover over me!</p>
     </div>
     <div class="container-padding alter2">
         <h1 class="r2c2">Row 2 Column 2</h1>
-        <!-- <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nostrum, repellat facilis
-                commodi, iusto provident animi debitis maiores id corporis sit ut pariatur aspernatur ipsa modi dicta
-                quisquam porro nesciunt tempora ab? Aut esse ducimus eligendi illum a eaque nostrum distinctio
-                dignissimos error fuga impedit delectus recusandae praesentium, dolorem aspernatur.</p> -->
 
-        <!-- <button (click)="addStudent()" class="add-button">Add Student</button>
-        <table class="table-one">
-            <thead>
-                <tr>
-                    <td>ID:</td>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                    <td>Courses</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let student of students">
-                    <td>{{student.id}}</td>
-                    <td>{{student.firstName}}</td>
-                    <td>{{student.lastName}}</td>
-                    <td>{{student.course}}</td>
-                </tr>
-            </tbody>
-        </table> -->
-
-        <table class="table">
+        <router-outlet class="main-outlet"></router-outlet>
+        <!-- <table class="table">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">ID</th>
@@ -41,8 +17,13 @@
                     <th scope="col">Courses</th>
                     <th>
                         <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-success" (click)="saveStudent()">Save</button>
-                            <button type="button" class="btn btn-info" [disabled]="disableAddButton" (click)=addStudent()>Add</button>
+                            <button type="button" mat-raised-button color="accent" (click)="saveStudent()">
+                                <mat-icon>save_edit</mat-icon>
+                            </button>
+                            <button type="button" mat-raised-button color="warn" [disabled]="disableAddButton"
+                                (click)=addStudent()>
+                                <mat-icon>create</mat-icon>
+                            </button>
                         </div>
                     </th>
                 </tr>
@@ -55,32 +36,28 @@
                     <td *ngIf="student.editMode === false">{{ student.course }}</td>
 
                     <th *ngIf="student.editMode" scope="row">
-                            <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID">
-                        </th>
-                        <td *ngIf="student.editMode">
-                            <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="First Name">
-                        </td>
-                        <td *ngIf="student.editMode">
-                            <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name">
-                        </td>
-                        <td *ngIf="student.editMode">
-                            <input [(ngModel)]="student.course" type="text" class="form-control" placeholder="Course">
-                        </td>
-                    
-                    <td><button type="button" class="btn btn-danger pull-right" (click)="removeStudent(i)">X</button></td>
+                        <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID">
+                    </th>
+                    <td *ngIf="student.editMode">
+                        <input [(ngModel)]="student.firstName" type="text" class="form-control"
+                            placeholder="First Name">
+                    </td>
+                    <td *ngIf="student.editMode">
+                        <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name">
+                    </td>
+                    <td *ngIf="student.editMode">
+                        <input [(ngModel)]="student.course" type="text" class="form-control" placeholder="Course">
+                    </td>
+
+                    <td>
+                        <button type="button" class="pull-right" mat-raised-button color="warn"
+                            (click)="removeStudent(i)">
+                            <mat-icon>delete_sweep</mat-icon>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
-        </table>
-
-        <!-- <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button> -->
-        <!-- <button type="button" class="btn btn-danger">Danger</button> -->
-        <!-- <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
-        <button type="button" class="btn btn-link">Link</button> -->
+        </table> -->
 
     </div>
     <div class="container-padding alter">

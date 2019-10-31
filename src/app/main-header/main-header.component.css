@@ -14,7 +14,7 @@
 }
 
 p, h1 {
-    text-align: center;
+    /* text-align: center; */
     font-size: 110%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 300;
@@ -57,4 +57,12 @@ body {
 
 .text-center:hover {
     color: red;
+}
+
+.nav-buttons {
+    margin-right: 10px;
+}
+
+.toolbar {
+    height: 100%;
 }

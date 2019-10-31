@@ -1,15 +1,20 @@
-
-
+<mat-toolbar color="accent" class="toolbar">
     <div class="row-one">
         <div class="container-padding">
-            <h1>Row 1 Column 1</h1>
+            Row 1 Column 1
         </div>
-        <div class="container-padding text-center" id="r1c2" (mouseenter)="showGreeting()"
-            (mouseleave)="resetGreeting()">
-            r1c2
+        <div class="container-padding text-center" id="r1c2">
+            <button (click)="navigateTo('')" class="nav-buttons" type="button" mat-raised-button color="warn">
+                Home
+            </button>
+            <button (click)="navigateTo('courses')" class="nav-buttons" type="button" mat-raised-button color="warn">
+                Courses
+            </button>
         </div>
         <div class="container-padding">
-            <h1>Row 1 Column 3</h1>
+            <!-- <h1>Row 1 Column 3</h1> -->
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
         </div>
     </div>
-
+</mat-toolbar>

@@ -91,3 +91,7 @@ h1 {
 .bulldog.hover {
     display: block;
 }
+
+.main-outlet {
+    display: none;
+}
